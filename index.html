@@ -1,52 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mohammed Ansar — Smart Profile</title>
-  <meta name="description" content="Connect with Mohammed Ansar Patla on LinkedIn, Instagram, phone, or email.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammed Ansar Patla — Smart Profile</title>
+  <meta name="description" content="Connect with Mohammed Ansar Patla on LinkedIn, Instagram, WhatsApp, or Email.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0b0f13; --card: #121821; --fg: #eaf1f8;
+      --bg:#0b0f13; --card:#121821; --fg:#eaf1f8;
       --muted:#9eb1c7; --accent:#5fb3ff; --border:#1e2633;
     }
     *{box-sizing:border-box}
     body{
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--fg);
-      background: linear-gradient(135deg,#0b0f13,#121821 60%, #0b0f13);
-      min-height: 100svh; display: grid; place-items: center; padding: 24px;
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--fg);
+      background:
+        radial-gradient(900px 500px at -20% 0%, #142033 0%, transparent 60%),
+        radial-gradient(900px 500px at 120% 30%, #0e1726 0%, transparent 60%),
+        linear-gradient(135deg,#0b0f13,#121821 60%, #0b0f13);
+      min-height:100svh; display:grid; place-items:center; padding:24px;
     }
     .card{
-      width: min(860px, 100%); background: var(--card); border: 1px solid var(--border);
-      border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,.35); padding: 28px;
+      width:min(860px,100%); background:var(--card); border:1px solid var(--border);
+      border-radius:24px; box-shadow:0 14px 50px rgba(0,0,0,.35); padding:28px;
     }
-    h1{margin:0 0 6px; font-size: clamp(26px, 5vw, 40px);}
-    p.muted{margin: 0 0 12px; color: var(--muted)}
-    .row{display:flex; flex-wrap:wrap; gap:12px; margin-top: 12px;}
+    .top{
+      display:grid; grid-template-columns:96px 1fr; gap:16px; align-items:center;
+    }
+    .avatar{
+      width:96px; height:96px; border-radius:50%; object-fit:cover;
+      border:2px solid #203048; box-shadow:0 6px 16px rgba(0,0,0,.35);
+    }
+    h1{margin:0 0 4px; font-size:clamp(26px,5vw,40px);}
+    .muted{margin:0; color:var(--muted)}
+    .row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      display:inline-flex; align-items:center; gap:10px;
       padding:12px 16px; border-radius:12px; background:#1a2330; color:var(--fg);
       text-decoration:none; font-weight:600; border:1px solid #273246; transition:.18s ease;
     }
-    .btn:hover{ transform: translateY(-1px); border-color: var(--accent); }
+    .btn:hover{ transform:translateY(-1px); border-color:var(--accent) }
+    .btn svg{ width:18px; height:18px }
+    .section{margin-top:20px; padding-top:18px; border-top:1px solid var(--border)}
     footer{margin-top:18px; color:#7f93ad; font-size:12px}
+    .numbers{margin-top:14px; font-size:14px; color:var(--fg);}
+    .numbers span{display:block; margin-top:4px;}
+    @media (max-width:520px){
+      .top{ grid-template-columns:72px 1fr }
+      .avatar{ width:72px; height:72px }
+    }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Mohammed Ansar </h1>
-    <p class="muted">Tap to connect instantly</p>
+  <main class="card" role="main">
+    <header class="top">
+      <img src="./ansar.jpg" alt="Portrait of Mohammed Ansar Patla" class="avatar" />
+      <div>
+        <h1>Mohammed Ansar Patla</h1>
+        <p class="muted">Tap to connect instantly</p>
+      </div>
+    </header>
 
-    <div class="row">
-      <a class="btn" href="http://linkedin.com/in/mohammed-ansar-patla" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://www.instagram.com/anchuu.___?igsh=MXRyNm9oMHR0bDQ2ag%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
-      <a class="btn" href="tel:+918893695251">Call</a>
-      <a class="btn" href="mailto:patlamohammedansar@gmail.com">Email</a>
+    <div class="row" aria-label="Primary actions">
+      <!-- LinkedIn -->
+      <a class="btn" href="http://linkedin.com/in/mohammed-ansar-patla" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.48 2.48 0 1 1 0 3.5a2.48 2.48 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.47 4.73-2.47C21.4 7.73 24 10 24 14.26V24h-5v-8.5c0-2.03-.04-4.65-3-4.65-3 0-3.46 2.2-3.46 4.48V24H8z"/></svg>
+        LinkedIn
+      </a>
+
+      <!-- Instagram -->
+      <a class="btn" href="https://www.instagram.com/anchuu.___?igsh=MXRyNm9oMHR0bDQ2ag%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 4a6 6 0 1 0 .001 12.001A6 6 0 0 0 12 6zm0 2.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6zM18.5 6a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+        Instagram
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="btn" href="https://wa.me/918893695251" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-9.86 17.4L.5 23.5l5.86-1.54A11.5 11.5 0 1 0 12 .5zm0 2a9.5 9.5 0 0 1 8.1 14.8l-.26.4.43 2.57-2.54-.67-.38.24a9.5 9.5 0 0 1-14.3-8.4 9.5 9.5 0 0 1 9.5-9.5zm-.07 3c-.44 0-.9.03-1.35.11-1.08.18-1.65.9-1.83 1.58-.2.73-.47 1.8.3 2.93s2.62 3.92 5.65 5.34c2.8 1.3 3.4.8 4.02.67.62-.12 1.98-.9 2.27-1.77.28-.86.28-1.6.2-1.77-.08-.17-.3-.27-.62-.44s-1.97-.97-2.27-1.1c-.3-.13-.52-.2-.73.2-.2.4-.85 1.09-1.04 1.3-.19.2-.38.23-.7.1-.33-.14-1.4-.52-2.66-1.64a8.35 8.35 0 0 1-1.82-2.2c-.2-.34-.02-.52.15-.7.15-.17.33-.44.5-.65.16-.21.23-.36.36-.6.13-.24.07-.47-.02-.65-.09-.18-.82-2-1.13-2.74-.3-.73-.6-.63-.82-.64z"/></svg>
+        WhatsApp
+      </a>
+
+      <!-- Email -->
+      <a class="btn" href="mailto:patlamohammedansar@gmail.com">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2 .5V7l8 5 8-5V5.5L12 10 4 5.5z"/></svg>
+        Email
+      </a>
     </div>
 
-    <footer>Last updated: <script>document.write(new Date().toLocaleString())</script></footer>
+    <div class="numbers">
+      <span><strong>Indian number:</strong> +91 88936 95251</span>
+      <span><strong>KSA number:</strong> +966 53 856 7224</span>
+    </div>
+
+    <div class="section">
+      <footer>Last updated:
+        <script>document.write(new Date().toLocaleString())</script>
+      </footer>
+    </div>
   </main>
 </body>
 </html>
